@@ -73,7 +73,7 @@ def append_items(item_names, data):
 # 是否记录做题次序,如果想要记录做题次序就改为True
 is_recode = True
 # 添加题库
-new_items = ["1920217-中篇测试.csv"]
+# new_items = ["1920217-中篇测试.csv"]
 # 清空做题次序
 is_clear = False
 # m是做题次数，如果作对这题m次就跳过这题，默认为3（作对是指在作答6次内回答正确）
@@ -95,7 +95,7 @@ mode = input("""
 if mode == '1':
     names = ["test1.csv"]
 elif mode == '2':
-    names = ['错题.csv']
+    names = ["错题.csv"]
 os.system('cls')
 print("""
         +++  开启你的刷题生涯吧！  +++
@@ -106,7 +106,7 @@ else:
     file = open("score.txt", "w")
     file.write("0")
     scores = 0
-data = pd.read_csv('./test/' + names[0], header=None)
+data = pd.read_csv(os.path.join('./test/', names[0]), header=None)
 # data = append_items(new_items,data)
 # del_same(data)
 # data = data.iloc[:,:-2]
@@ -152,7 +152,7 @@ while True:
         a.sort()
         a = "".join(a)
         if a == answer:
-            print("yes!")
+            print("答案正确!")
             if is_recode:
                 data.iloc[index, -1] += 1
                 data.to_csv("test/total.csv", header=None,
@@ -163,8 +163,9 @@ while True:
             break
         else:
             err += 1
+            print("答案错误!")
             if err >= 4:
-                print(answer)
+                print('正确答案是:', answer)
                 print("\n")
                 break
         k += 1
