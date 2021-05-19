@@ -164,7 +164,7 @@ while True:
         else:
             err += 1
             print("答案错误!")
-            if err >= 4:
+            if err >= 3:
                 print('正确答案是:', answer)
                 print("\n")
                 break
