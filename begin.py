@@ -96,7 +96,7 @@ if mode == '1':
     names = ["test1.csv"]
 elif mode == '2':
     names = ["错题.csv"]
-os.system('cls')
+os.system('clear')
 print("""
         +++  开启你的刷题生涯吧！  +++
     """)
