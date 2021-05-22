@@ -93,7 +93,7 @@ mode = input("""
 """)
 
 if mode == '1':
-    names = ["test1.csv"]
+    names = ["real_total.csv"]
 elif mode == '2':
     names = ["错题.csv"]
 os.system('clear')

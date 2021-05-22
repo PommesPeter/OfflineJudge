@@ -1,6 +1,7 @@
 import re
 
-import requests, json
+import requests
+import json
 import pandas as pd
 from pandas import DataFrame
 
@@ -76,8 +77,8 @@ if __name__ == '__main__':
         subjectList = json.loads(r.text)['lists']
         for subject in subjectList:
             # print(subject)
-            writeInToExecl(subject['title'], subject['type'], subject['answer'], subject['optionList'])
+            writeInToExecl(subject['title'], subject['type'],
+                           subject['answer'], subject['optionList'])
     except Exception as e:
         print("有问题请及时联系某某某")
         print(e)
-
