@@ -1,4 +1,5 @@
 # OfflineJudge
-思政课刷题器
 
-- 本仓库主要用于思政的刷题训练，只要有课堂派的题目就可以进行刷题！
+Practise Learner
+
+- This is for making more practises and exercises for the politics courses
